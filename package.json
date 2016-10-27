@@ -1,19 +1,18 @@
 {
-  "name": "prosemirror",
-  "version": "0.10.1",
-  "description": "Well-defined WYSIWYG editor",
+  "name": "prosemirror-old",
+  "version": "0.10.2",
+  "description": "Well-defined WYSIWYG editor (old version)",
   "main": "dist/edit/index.js",
   "license": "MIT",
   "maintainers": [
     {
-      "name": "Marijn Haverbeke",
-      "email": "marijnh@gmail.com",
-      "web": "http://marijnhaverbeke.nl"
+      "name": "Johannes Wilm",
+      "email": "johanneswilm@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/prosemirror/prosemirror.git"
+    "url": "git://github.com/fiduswriter/prosemirror-old.git"
   },
   "dependencies": {
     "browserkeymap": "^1.0.0",

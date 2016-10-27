@@ -443,12 +443,15 @@ class Schema {
   // Deserialize a mark from its JSON representation. This method is
   // bound.
   markFromJSON(json) {
-    let type = this.marks[json._]
+    let type = this.marks[json.type]
     let attrs = null
-    for (let prop in json) if (prop != "_") {
-      if (!attrs) attrs = Object.create(null)
-      attrs[prop] = json[prop]
+    if (json.attrs) {
+      for (let prop in json.attrs) {
+        if (!attrs) attrs = Object.create(null)
+        attrs[prop] = json.attrs[prop]
+      }
     }
+
     return attrs ? type.create(attrs) : type.instance
   }
 

@@ -19,8 +19,11 @@ class Mark {
   // :: () → Object
   // Convert this mark to a JSON-serializeable representation.
   toJSON() {
-    let obj = {_: this.type.name}
-    for (let attr in this.attrs) obj[attr] = this.attrs[attr]
+    let obj = {type: this.type.name}
+    for (let attr in this.attrs) {
+      if (!obj.attrs) obj.attrs = Object.create(null)
+      obj.attrs[attr] = this.attrs[attr]
+    }
     return obj
   }
 
