@@ -43,8 +43,8 @@ function options(ranges) {
 
         dom.setAttribute("pm-offset", offset)
         dom.setAttribute("pm-size", size)
-        if (ranges.current.length)
-          dom.className = ranges.current.join(" ")
+
+        ranges.current.forEach(className => dom.classList.add(className))
 
         if (!fragment && (nextCut > -1 || ranges.element))
           fragment = document.createDocumentFragment()

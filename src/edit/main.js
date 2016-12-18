@@ -358,7 +358,7 @@ class ProseMirror {
     this.unscheduleFlush()
 
     // IE does not support calling contains() on document
-    let root = this.root.body || this.root;
+    let root = this.root.body || this.root
     if (!root.contains(this.wrapper) || !this.operation) return false
     this.on.flushing.dispatch()
 
