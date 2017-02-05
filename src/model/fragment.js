@@ -22,7 +22,8 @@ class Fragment {
   toStringInner() { return this.content.join(", ") }
 
   nodesBetween(from, to, f, nodeStart, parent) {
-    for (let i = 0, pos = 0; pos < to; i++) {
+    let len = Math.min(this.content.length, to)
+    for (let i = 0, pos = 0; pos < len; i++) {
       let child = this.content[i], end = pos + child.nodeSize
       if (end > from && f(child, nodeStart + pos, parent, i) !== false && child.content.size) {
         let start = pos + 1
