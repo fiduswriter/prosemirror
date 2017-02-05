@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-old",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "Well-defined WYSIWYG editor (old version)",
   "main": "dist/edit/index.js",
   "license": "MIT",
